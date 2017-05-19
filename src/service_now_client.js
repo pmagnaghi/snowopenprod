@@ -4,7 +4,7 @@ const querystring = require('querystring');
 const serviceNowClient = {
   getTableRecord: (table, sysId) => new Promise((resolve, reject) => {
     request.get({
-      url: `${process.env.base_url}/api/now/v2/table/${table}/${sysId}`,
+      url: `${process.env.base_url}/api/now/v2/table/${table}/${number}`,
       auth: {
         user: process.env.servicenow_username,
         pass: process.env.servicenow_password,
